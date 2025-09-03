@@ -1,90 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="#4C4C4C"
     android:padding="16dp">
 
-    <!-- Campo Correo -->
-
-    <!-- Botón -->
-
-    <!-- Enlace -->
-
-    <ImageView
-        android:id="@+id/logoRecuperar"
-        android:layout_width="212dp"
-        android:layout_height="158dp"
-        android:src="@mipmap/ic_launcher_foreground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/mensajeRecuperar"
-        android:layout_width="222dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
-        android:text="Ingresa tu correo para recuperar tu contraseña"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRecuperacioncontraseña" />
-
-    <EditText
-        android:id="@+id/editCorreoRecuperar"
-        android:layout_width="385dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="28dp"
-        android:background="@color/white"
-        android:hint="Correo electrónico"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mensajeRecuperar" />
-
-    <Button
-        android:id="@+id/btnEnviarSolicitud"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#00BFFF"
-        android:text="Enviar solicitud"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editCorreoRecuperar" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/txtVolverLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Volver al inicio de sesión"
-        android:textColor="#AFFF00"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnEnviarSolicitud" />
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoRecuperar"
+            android:layout_width="212dp"
+            android:layout_height="158dp"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:layout_marginTop="24dp" />
 
-    <TextView
-        android:id="@+id/textRecuperacioncontraseña"
-        android:layout_width="235dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="40dp"
-        android:text="Recuperación de contraseña"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoRecuperar" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Título -->
+        <TextView
+            android:id="@+id/textRecuperacioncontraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Recuperación de contraseña"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <!-- Mensaje -->
+        <TextView
+            android:id="@+id/mensajeRecuperar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Ingresa tu correo para recuperar tu contraseña"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Campo de correo -->
+
+        <!-- Botón -->
+        <EditText
+            android:id="@+id/editTextUser"
+            android:layout_width="340dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/rounded_tv"
+            android:ems="10"
+            android:hint="Correo electronico"
+            android:inputType="text"
+            android:paddingStart="15dp" />
+
+        <Button
+            android:id="@+id/btnEnviarSolicitud"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#00BFFF"
+            android:text="Enviar solicitud"
+            android:textColor="#FFFFFF" />
+
+        <!-- Enlace volver al login -->
+        <TextView
+            android:id="@+id/txtVolverLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Volver al inicio de sesión"
+            android:textColor="#AFFF00"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

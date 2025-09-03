@@ -1,182 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey">
+    android:fillViewport="true"
+    android:background="@color/grey"
+    tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="85dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/NombreDeLaApp_Login"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <TextView
-        android:id="@+id/NombreDeLaApp_Login"
-        android:layout_width="202dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="52dp"
-        android:text="FLY VPN"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Parrafo_Login"
-        android:layout_width="353dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="20dp"
-        android:text="La aventura esta por iniciar, por favor inicia sesión"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="74dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Parrafo_Login"
-        app:srcCompat="@drawable/_0_usuario" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="74dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/boton_ingresar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.031"
-        app:srcCompat="@drawable/_0_llave" />
-
-    <Button
-        android:id="@+id/boton_ingresar"
-        android:layout_width="243dp"
-        android:layout_height="55dp"
-        android:backgroundTint="@color/blue"
-        android:fontFamily="sans-serif"
-        android:text="Ingresar"
-        android:textAlignment="center"
-        android:textSize="27sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/white"
-        app:strokeWidth="2dp"
-        tools:layout_editor_absoluteY="426dp" />
-
-    <TextView
-        android:id="@+id/textNoTienesCuenta"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="56dp"
-        android:text="No tienes cuenta?"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton_ingresar"
-        app:layout_constraintVertical_bias="1.0" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/BotonGoogle"
-        android:layout_width="292dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/white"
-        android:text="Ingresa con Google"
-        android:textAlignment="textEnd"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:icon="@drawable/_0_google"
-        app:iconPadding="2dp"
-        app:iconTint="@android:color/transparent"
-        app:iconTintMode="add"
-        app:layout_constraintBottom_toTopOf="@+id/textNoTienesCuenta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/blue"
-        app:strokeWidth="2sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="32dp">
 
-    <EditText
-        android:id="@+id/editTextUser"
-        android:layout_width="209dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_tv"
-        android:ems="10"
-        android:inputType="text"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/Parrafo_Login"
-        app:layout_constraintVertical_bias="0.096" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="85dp"
+                android:layout_height="92dp"
+                android:src="@mipmap/ic_launcher" />
 
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="209dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/rounded_tv"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/boton_ingresar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.972" />
+            <TextView
+                android:id="@+id/NombreDeLaApp_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="FLY VPN"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/RecuperarContraseña"
-        android:layout_width="212dp"
-        android:layout_height="32dp"
-        android:text="Recuperar contraseña"
-        android:textColor="@color/green"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/BotonGoogle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton_ingresar"
-        app:layout_constraintVertical_bias="0.23" />
+        <TextView
+            android:id="@+id/Parrafo_Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="La aventura está por iniciar, por favor inicia sesión"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
 
-    <TextView
-        android:id="@+id/Registrate"
-        android:layout_width="102dp"
-        android:layout_height="28dp"
-        android:text="Registrate"
-        android:textColor="@color/green"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toEndOf="@+id/textNoTienesCuenta"
-        app:layout_constraintTop_toBottomOf="@+id/BotonGoogle"
-        app:layout_constraintVertical_bias="0.294" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="32dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="74dp"
+                android:layout_height="62dp"
+                android:src="@drawable/_0_usuario"/>
+
+            <EditText
+                android:id="@+id/editTextUser"
+                android:layout_width="209dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/rounded_tv"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Usuario"
+                android:paddingStart="15dp"/>
+        </LinearLayout>
+
+        <!-- Password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="74dp"
+                android:layout_height="60dp"
+                android:src="@drawable/_0_llave"
+                />
+
+            <EditText
+                android:id="@+id/Password"
+                android:layout_width="209dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/rounded_tv"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Contraseña"
+                android:paddingStart="15dp"/>
+        </LinearLayout>
+
+        <!-- Botón ingresar -->
+        <Button
+            android:id="@+id/boton_ingresar"
+            android:layout_width="243dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/blue"
+            android:text="Ingresar"
+            android:textSize="27sp"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"/>
+
+        <!-- Recuperar contraseña -->
+        <TextView
+            android:id="@+id/RecuperarContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Recuperar contraseña"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/BotonGoogle"
+            android:layout_width="292dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/white"
+            android:text="Ingresa con Google"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:icon="@drawable/_0_google"
+            app:iconPadding="1dp"
+            app:iconSize="34dp"
+            app:iconTint="@color/blue"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="2sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/textNoTienesCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿No tienes cuenta?"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/Registrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Regístrate"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

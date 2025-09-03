@@ -1,116 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="#4C4C4C"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/editNombres"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@color/white"
-        android:backgroundTint="#FFFFFF"
-        android:hint="Nombres"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <EditText
-        android:id="@+id/editApellidos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/white"
-        android:backgroundTint="#FFFFFF"
-        android:hint="Apellidos"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNombres" />
+        <!-- Encabezado con logo y texto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
 
-    <EditText
-        android:id="@+id/editCorreo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/white"
-        android:backgroundTint="#FFFFFF"
-        android:hint="Correo electronico"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
+            <ImageView
+                android:id="@+id/logoPerfil"
+                android:layout_width="113dp"
+                android:layout_height="92dp"
+                android:src="@mipmap/ic_launcher_round"/>
 
-    <!-- Botón -->
+            <TextView
+                android:id="@+id/textPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Perfil"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:fontFamily="serif-monospace"/>
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTelefono"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/white"
-        android:hint="Telefono"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editCorreo" />
+        <!-- Imagen usuario -->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="129dp"
+            android:layout_marginTop="36dp"
+            app:srcCompat="@drawable/_0_usuario"/>
 
-    <ImageView
-        android:id="@+id/logoPerfil"
-        android:layout_width="113dp"
-        android:layout_height="92dp"
-        android:src="@mipmap/ic_launcher_round"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- Campos -->
+        <EditText
+            android:id="@+id/editTextNombresUsuario"
+            android:layout_width="209dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_tv"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Nombre"
+            android:paddingStart="15dp"/>
 
-    <Button
-        android:id="@+id/btnEditarPerfil"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:backgroundTint="#00BFFF"
-        android:text="Editar Perfil"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefono"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/editTextApellidosUsuario"
+            android:layout_width="209dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_tv"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Apellidos"
+            android:paddingStart="15dp"/>
 
-    <TextView
-        android:id="@+id/textPerfil"
-        android:layout_width="129dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="serif-monospace"
-        android:text="Perfil"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toEndOf="@+id/logoPerfil"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/editTextCorreoUsuario"
+            android:layout_width="209dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_tv"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="Correo"
+            android:paddingStart="15dp"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="120dp"
-        android:layout_height="129dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoPerfil"
-        app:srcCompat="@drawable/_0_usuario" />
+        <EditText
+            android:id="@+id/editTextTelefonoUsuario"
+            android:layout_width="209dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_tv"
+            android:ems="10"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:paddingStart="15dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Botón -->
+        <Button
+            android:id="@+id/btnEditarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#00BFFF"
+            android:text="Editar Perfil"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</ScrollView>
