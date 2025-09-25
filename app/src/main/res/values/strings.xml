@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FLY_VPN</string>
+    <string name="txt_userName">Milton Andres</string>
+    <string name="txt_userLastName">Novoa Gutierres</string>
+    <string name="txt_userEmail">mandresnovoa@ucompensar.edu.co</string>
+    <string name="txt_profile">Sus datos:</string>
+    <string name="txt_userPhone">3057818214</string>
+    <string name="txt_profile_bt_edit">Editar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="op1">inicio</string>
+    <string name="op2">Mi perfil</string>
+    <string name="op3">Configuracion</string>
+    <string name="op4">Cerrar sesion</string>
 </resources>

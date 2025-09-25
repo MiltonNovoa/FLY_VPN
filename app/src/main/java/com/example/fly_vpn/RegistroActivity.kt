@@ -12,9 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 class RegistroActivity : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
-
     private lateinit var editNombres: EditText
-
     private lateinit var editApellidos: EditText
     private lateinit var editCorreo: EditText
     private lateinit var editTelefono: EditText

@@ -15,14 +15,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val botonComenzar = findViewById<Button>(R.id.botonComenzar)
-        botonComenzar.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
+
         val registrarse = findViewById<TextView>(R.id.registrarse)
         registrarse.setOnClickListener {
             val intent = Intent(this, RegistroActivity::class.java)
             startActivity(intent)
         }
+    }
+    private fun setupOnClickListener() {
+
     }
 }
